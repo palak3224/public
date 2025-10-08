@@ -1,7 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function CoreServices() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const services = [
     {
@@ -30,18 +41,19 @@ export default function CoreServices() {
     <div style={{ 
       minHeight: '100vh', 
       background: '#f8f8f8',
-      padding: '80px 20px',
+      padding: isMobile ? '40px 20px' : '80px 20px',
       fontFamily: "'Inter', sans-serif"
     }}>
       <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
         {/* Header */}
         <h2 style={{
-          fontSize: '48px',
+          fontSize: isMobile ? '32px' : '48px',
           fontWeight: '700',
           textAlign: 'center',
-          marginBottom: '80px',
+          marginBottom: isMobile ? '40px' : '80px',
           color: '#b02d33',
-          letterSpacing: '-0.5px'
+          letterSpacing: '-0.5px',
+          lineHeight: '1.2'
         }}>
           Your Partner in <span style={{ color: '#eb6126' }}>Progress</span>
         </h2>
@@ -49,90 +61,19 @@ export default function CoreServices() {
         {/* Content Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1.2fr',
-          gap: '60px',
+          gridTemplateColumns: isMobile ? '1fr' : '1fr 1.2fr',
+          gap: isMobile ? '40px' : '60px',
           alignItems: 'start'
         }}>
-          {/* Left Side - Accordion */}
-          <div style={{
-            paddingTop: '20px'
-          }}>
-            {services.map((service, index) => (
-              <div
-                key={index}
-                style={{
-                  borderBottom: '1px solid #e0e0e0',
-                  paddingBottom: '28px',
-                  marginBottom: '28px'
-                }}
-              >
-                {/* Title Row */}
-                <div
-                  onClick={() => setActiveIndex(index)}
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    cursor: 'pointer',
-                    paddingBottom: activeIndex === index ? '20px' : '0',
-                    paddingTop: '8px'
-                  }}
-                >
-                  <h3 style={{
-                    fontSize: '26px',
-                    fontWeight: '600',
-                    color: activeIndex === index ? '#eb6126' : '#4a5568',
-                    margin: '0',
-                    transition: 'color 0.3s ease'
-                  }}>
-                    {service.title}
-                  </h3>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    style={{
-                      transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
-                      transition: 'transform 0.3s ease',
-                      flexShrink: 0,
-                      marginLeft: '16px'
-                    }}
-                  >
-                    <path
-                      d="M6 9L12 15L18 9"
-                      stroke={activeIndex === index ? '#eb6126' : '#718096'}
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-
-                {/* Description */}
-                {activeIndex === index && (
-                  <p style={{
-                    fontSize: '17px',
-                    color: '#4a5568',
-                    lineHeight: '1.8',
-                    margin: '0',
-                    paddingRight: '20px'
-                  }}>
-                    {service.description}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* Right Side - Image */}
+          {/* Right Side - Image (shown first on mobile) */}
           <div style={{
             position: 'relative',
-            width: '90%',
-            height: '500px',
+            width: '100%',
+            height: isMobile ? '350px' : '500px',
             borderRadius: '20px',
             overflow: 'hidden',
-            boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)'
+            boxShadow: '0 10px 40px rgba(0, 0, 0, 0.1)',
+            order: isMobile ? -1 : 1
           }}>
             <img
               src={services[activeIndex].image}
@@ -140,7 +81,8 @@ export default function CoreServices() {
               style={{
                 width: '100%',
                 height: '100%',
-                objectFit: 'cover'
+                objectFit: 'cover',
+                transition: 'opacity 0.3s ease'
               }}
             />
             
@@ -168,6 +110,79 @@ export default function CoreServices() {
                 />
               ))}
             </div>
+          </div>
+
+          {/* Left Side - Accordion */}
+          <div style={{
+            paddingTop: isMobile ? '0' : '20px',
+            order: isMobile ? 1 : 0
+          }}>
+            {services.map((service, index) => (
+              <div
+                key={index}
+                style={{
+                  borderBottom: '1px solid #e0e0e0',
+                  paddingBottom: isMobile ? '20px' : '28px',
+                  marginBottom: isMobile ? '20px' : '28px'
+                }}
+              >
+                {/* Title Row */}
+                <div
+                  onClick={() => setActiveIndex(index)}
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    cursor: 'pointer',
+                    paddingBottom: activeIndex === index ? '20px' : '0',
+                    paddingTop: '8px'
+                  }}
+                >
+                  <h3 style={{
+                    fontSize: isMobile ? '20px' : '26px',
+                    fontWeight: '600',
+                    color: activeIndex === index ? '#eb6126' : '#4a5568',
+                    margin: '0',
+                    transition: 'color 0.3s ease'
+                  }}>
+                    {service.title}
+                  </h3>
+                  <svg
+                    width={isMobile ? '20' : '24'}
+                    height={isMobile ? '20' : '24'}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    style={{
+                      transform: activeIndex === index ? 'rotate(180deg)' : 'rotate(0deg)',
+                      transition: 'transform 0.3s ease',
+                      flexShrink: 0,
+                      marginLeft: '16px'
+                    }}
+                  >
+                    <path
+                      d="M6 9L12 15L18 9"
+                      stroke={activeIndex === index ? '#eb6126' : '#718096'}
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
+
+                {/* Description */}
+                {activeIndex === index && (
+                  <p style={{
+                    fontSize: isMobile ? '15px' : '17px',
+                    color: '#4a5568',
+                    lineHeight: '1.8',
+                    margin: '0',
+                    paddingRight: isMobile ? '0' : '20px'
+                  }}>
+                    {service.description}
+                  </p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
