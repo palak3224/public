@@ -122,14 +122,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <div
-              className="w-10 h-10 md:w-12 md:h-12 rounded-lg flex items-center justify-center text-white font-bold text-lg md:text-xl"
-              style={{ backgroundColor: "#b02d33" }}
-            >
-              AW
-            </div>
-          </div>
-
+  <div className="w-10 h-10 md:w-full md:h-20 rounded-lg overflow-hidden">
+    <img
+      src="/amoollogo.jpg" // 🔁 Replace this with your actual image path or URL
+      alt="Profile"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             <a
