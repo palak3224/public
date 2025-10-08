@@ -122,7 +122,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-  <div className="w-10 h-10 md:w-full md:h-20 rounded-lg overflow-hidden">
+  <div className="w-full h-10 md:w-full md:h-20 rounded-lg overflow-hidden">
     <img
       src="/amoollogo.jpg" // 🔁 Replace this with your actual image path or URL
       alt="Profile"
