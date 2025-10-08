@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <div style={{ backgroundColor: '#f9fafb' }} className="py-20 px-4 sm:px-6 lg:px-8">
+    <div style={{ background: 'linear-gradient(135deg, #fff5f3 0%, #ffe8e0 50%, #ffd5cc 100%)' }} className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading Section */}
         <div className="text-center mb-12">

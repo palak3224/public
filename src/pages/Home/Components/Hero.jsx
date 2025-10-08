@@ -49,7 +49,7 @@ export default function HeroSection() {
   };
 
   return (
-    <div className="bg-white min-h-screen flex items-center">
+    <div className="min-h-screen flex items-center" style={{ background: 'linear-gradient(135deg, #fff5f3 0%, #ffe8e0 50%, #ffd5cc 100%)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -96,7 +96,7 @@ export default function HeroSection() {
                 className="w-full h-full object-cover pointer-events-none"
                 style={{ minHeight: '500px' }}
               />
-              <div 
+              {/* <div 
                 className="absolute bottom-0 left-0 right-0 p-6 text-white pointer-events-none"
                 style={{ 
                   background: 'linear-gradient(to top, rgba(0,0,0,0.7), transparent)'
@@ -105,7 +105,7 @@ export default function HeroSection() {
                 <h3 className="text-2xl font-bold">
                   {slides[currentSlide].title}
                 </h3>
-              </div>
+              </div> */}
             </div>
 
             {/* Slider Controls */}
