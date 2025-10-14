@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDown, Menu, X, ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -132,20 +134,20 @@ const Navbar = () => {
 </div>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <a
-              href="/"
+            <Link
+              to="/"
               className="font-semibold hover:opacity-80 transition-opacity text-sm xl:text-base"
               style={{ color: "#b02d33" }}
             >
               Home
-            </a>
-            <a
-              href="/about"
+            </Link>
+            <Link
+              to="/about"
               className="font-semibold hover:opacity-80 transition-opacity text-sm xl:text-base"
               style={{ color: "#b02d33" }}
             >
               About Us
-            </a>
+            </Link>
 
             {/* Services Mega Dropdown with Sticky Behavior */}
             <div className="relative">
@@ -254,13 +256,13 @@ const Navbar = () => {
               )}
             </div>
 
-            <a
-              href="/team"
+            <Link
+              to="/team"
               className="font-semibold hover:opacity-80 transition-opacity text-sm xl:text-base"
               style={{ color: "#b02d33" }}
             >
               Our Team
-            </a>
+            </Link>
             <a
               href="/contact"
               className="font-semibold hover:opacity-80 transition-opacity text-sm xl:text-base"
