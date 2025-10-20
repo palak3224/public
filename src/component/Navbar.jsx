@@ -32,9 +32,13 @@ const Navbar = () => {
         {
           parent: "GST Services",
           children: [
-            { name: "GST Registration Services", path: "/services/finance-and-tax/gst-registration-services" },
-            { name: "GST Return Filing", path: "/services/finance-and-tax/gst-return-filing" },
-            { name: "GST Audit & Assessment Support", path: "/services/finance-and-tax/gst-audit-and-assessment-support" },
+            { name: "Annual GST Return Filing", path: "/services/finance-and-tax/gst/annual-gst-return-filing" },
+            { name: "E-Way Bill & E-Invoicing Solutions", path: "/services/finance-and-tax/gst/e-way-bill-and-e-invoicing-solutions" },
+            { name: "GST Audit & Assessment Support", path: "/services/finance-and-tax/gst/gst-audit-and-assessment-support" },
+            { name: "GST Reconciliation", path: "/services/finance-and-tax/gst/gst-reconciliation" },
+            { name: "GST Registration Services", path: "/services/finance-and-tax/gst/gst-registration-services" },
+            { name: "GST Return Filing", path: "/services/finance-and-tax/gst/gst-return-filing" },
+            { name: "Input Tax Credit Advisory", path: "/services/finance-and-tax/gst/input-tax-credit-advisory" },
           ],
         },
         {

@@ -13,6 +13,13 @@ import ITRFilingForIndividuals from "@/pages/Services/FinanceAndTax/IncomeTax/IT
 import TDSTCSReturnFiling from "@/pages/Services/FinanceAndTax/IncomeTax/TDSTCSReturnFiling";
 import TaxPlanningAndSavingsAdvisory from "@/pages/Services/FinanceAndTax/IncomeTax/TaxPlanningAndSavingsAdvisory";
 import TaxRefundStatus from "@/pages/Services/FinanceAndTax/IncomeTax/TaxRefundStatus";
+import AnnualGSTReturnFiling from "@/pages/Services/FinanceAndTax/GST/AnnualGSTReturnFiling";
+import EWayBillAndEInvoicingSolutions from "@/pages/Services/FinanceAndTax/GST/EWayBillAndEInvoicingSolutions";
+import GSTAuditAndAssessmentSupport from "@/pages/Services/FinanceAndTax/GST/GSTAuditAndAssessmentSupport";
+import GSTReconciliation from "@/pages/Services/FinanceAndTax/GST/GSTReconciliation";
+import GSTRegistrationServices from "@/pages/Services/FinanceAndTax/GST/GSTRegistrationServices";
+import GSTReturnFiling from "@/pages/Services/FinanceAndTax/GST/GSTReturnFiling";
+import InputTaxCreditAdvisory from "@/pages/Services/FinanceAndTax/GST/InputTaxCreditAdvisory";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +68,34 @@ const router = createBrowserRouter([
       {
         path: "services/finance-and-tax/tax-refund-status",
         element: <TaxRefundStatus />,
+      },
+      {
+        path: "services/finance-and-tax/gst/annual-gst-return-filing",
+        element: <AnnualGSTReturnFiling />,
+      },
+      {
+        path: "services/finance-and-tax/gst/e-way-bill-and-e-invoicing-solutions",
+        element: <EWayBillAndEInvoicingSolutions />,
+      },
+      {
+        path: "services/finance-and-tax/gst/gst-audit-and-assessment-support",
+        element: <GSTAuditAndAssessmentSupport />,
+      },
+      {
+        path: "services/finance-and-tax/gst/gst-reconciliation",
+        element: <GSTReconciliation />,
+      },
+      {
+        path: "services/finance-and-tax/gst/gst-registration-services",
+        element: <GSTRegistrationServices />,
+      },
+      {
+        path: "services/finance-and-tax/gst/gst-return-filing",
+        element: <GSTReturnFiling />,
+      },
+      {
+        path: "services/finance-and-tax/gst/input-tax-credit-advisory",
+        element: <InputTaxCreditAdvisory />,
       },
     ],
   },
