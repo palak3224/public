@@ -223,20 +223,20 @@ const Navbar = () => {
             >
               Our Team
             </Link>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="font-semibold hover:opacity-80 transition-opacity text-sm xl:text-base"
               style={{ color: "#b02d33" }}
             >
               Contact Us
-            </a>
-            <a
-              href="/careers"
+            </Link>
+            <Link
+              to="/careers"
               className="font-semibold hover:opacity-80 transition-opacity text-sm xl:text-base"
               style={{ color: "#b02d33" }}
             >
               Careers
-            </a>
+            </Link>
           </div>
 
           {/* CTA + Mobile Button */}
@@ -365,20 +365,20 @@ const Navbar = () => {
               >
                 Our Team
               </a>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="font-semibold hover:opacity-80 transition-opacity py-2"
                 style={{ color: "#b02d33" }}
               >
                 Contact Us
-              </a>
-              <a
-                href="/careers"
+              </Link>
+              <Link
+                to="/careers"
                 className="font-semibold hover:opacity-80 transition-opacity py-2"
                 style={{ color: "#b02d33" }}
               >
                 Careers
-              </a>
+              </Link>
 
               <button
                 className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity w-full sm:hidden mt-4"

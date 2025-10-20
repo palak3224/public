@@ -20,6 +20,8 @@ import GSTReconciliation from "@/pages/Services/FinanceAndTax/GST/GSTReconciliat
 import GSTRegistrationServices from "@/pages/Services/FinanceAndTax/GST/GSTRegistrationServices";
 import GSTReturnFiling from "@/pages/Services/FinanceAndTax/GST/GSTReturnFiling";
 import InputTaxCreditAdvisory from "@/pages/Services/FinanceAndTax/GST/InputTaxCreditAdvisory";
+import Contact from "@/pages/Contact/Components/Contact";
+import Career from "@/pages/Career/Components/Career";
 
 const router = createBrowserRouter([
   {
@@ -96,6 +98,14 @@ const router = createBrowserRouter([
       {
         path: "services/finance-and-tax/gst/input-tax-credit-advisory",
         element: <InputTaxCreditAdvisory />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "careers",
+        element: <Career />,
       },
     ],
   },
