@@ -20,6 +20,11 @@ import GSTReconciliation from "@/pages/Services/FinanceAndTax/GST/GSTReconciliat
 import GSTRegistrationServices from "@/pages/Services/FinanceAndTax/GST/GSTRegistrationServices";
 import GSTReturnFiling from "@/pages/Services/FinanceAndTax/GST/GSTReturnFiling";
 import InputTaxCreditAdvisory from "@/pages/Services/FinanceAndTax/GST/InputTaxCreditAdvisory";
+import AccountingAndBookkeepingService from "@/pages/Services/FinanceAndTax/BusinessCompliance/AccountingAndBookkeepingService";
+import LLPRegistration from "@/pages/Services/FinanceAndTax/BusinessCompliance/LLPRegistration";
+import OnePersonCompanyRegistration from "@/pages/Services/FinanceAndTax/BusinessCompliance/OnePersonCompanyRegistration";
+import PrivateLimitedCompanyRegistration from "@/pages/Services/FinanceAndTax/BusinessCompliance/PrivateLimitedCompanyRegistration";
+import ROCFilingsAndAnnualCompliance from "@/pages/Services/FinanceAndTax/BusinessCompliance/ROCFilingsAndAnnualCompliance";
 import Contact from "@/pages/Contact/Components/Contact";
 import Career from "@/pages/Career/Components/Career";
 
@@ -36,39 +41,39 @@ const router = createBrowserRouter([
         element: <FinanceAndTax />,
       },
       {
-        path: "services/finance-and-tax/advance-tax-calculation",
+        path: "services/finance-and-tax/income-tax/advance-tax-calculation",
         element: <AdvanceTaxCalculation />,
       },
       {
-        path: "services/finance-and-tax/capital-gains-tax-advisory",
+        path: "services/finance-and-tax/income-tax/capital-gains-tax-advisory",
         element: <CapitalGainsTaxAdvisory />,
       },
       {
-        path: "services/finance-and-tax/handling-tax-notices",
+        path: "services/finance-and-tax/income-tax/handling-tax-notices",
         element: <HandlingTaxNotices />,
       },
       {
-        path: "services/finance-and-tax/itr-filing-for-businesses",
+        path: "services/finance-and-tax/income-tax/itr-filing-for-businesses",
         element: <ITRFilingForBusinesses />,
       },
       {
-        path: "services/finance-and-tax/itr-filing-for-huf",
+        path: "services/finance-and-tax/income-tax/itr-filing-for-huf",
         element: <ITRFilingForHUF />,
       },
       {
-        path: "services/finance-and-tax/itr-filing-for-individuals",
+        path: "services/finance-and-tax/income-tax/itr-filing-for-individuals",
         element: <ITRFilingForIndividuals />,
       },
       {
-        path: "services/finance-and-tax/tds-tcs-return-filing",
+        path: "services/finance-and-tax/income-tax/tds-tcs-return-filing",
         element: <TDSTCSReturnFiling />,
       },
       {
-        path: "services/finance-and-tax/tax-planning-and-savings-advisory",
+        path: "services/finance-and-tax/income-tax/tax-planning-and-savings-advisory",
         element: <TaxPlanningAndSavingsAdvisory />,
       },
       {
-        path: "services/finance-and-tax/tax-refund-status",
+        path: "services/finance-and-tax/income-tax/tax-refund-status",
         element: <TaxRefundStatus />,
       },
       {
@@ -98,6 +103,26 @@ const router = createBrowserRouter([
       {
         path: "services/finance-and-tax/gst/input-tax-credit-advisory",
         element: <InputTaxCreditAdvisory />,
+      },
+      {
+        path: "services/finance-and-tax/business-compliance/accounting-and-bookkeeping-service",
+        element: <AccountingAndBookkeepingService />,
+      },
+      {
+        path: "services/finance-and-tax/business-compliance/llp-registration",
+        element: <LLPRegistration />,
+      },
+      {
+        path: "services/finance-and-tax/business-compliance/one-person-company-registration",
+        element: <OnePersonCompanyRegistration />,
+      },
+      {
+        path: "services/finance-and-tax/business-compliance/private-limited-company-registration",
+        element: <PrivateLimitedCompanyRegistration />,
+      },
+      {
+        path: "services/finance-and-tax/business-compliance/roc-filings-and-annual-compliance",
+        element: <ROCFilingsAndAnnualCompliance />,
       },
       {
         path: "contact",
