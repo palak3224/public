@@ -13,31 +13,36 @@ const Navbar = () => {
   const services = {
     finance: {
       title: "Finance & Tax Services",
+      path: "/services/finance-and-tax",
       items: [
         {
           parent: "Income Tax Services",
           children: [
-            "ITR Filing for Individuals (Salaried)",
-            "ITR Filing for Businesses & Professionals",
-            "ITR Filing for HUF & AOP",
-            "Capital Gains Tax Advisory",
-            "Tax Planning & Savings Advisory",
+            { name: "Advance Tax Calculation", path: "/services/finance-and-tax/advance-tax-calculation" },
+            { name: "Capital Gains Tax Advisory", path: "/services/finance-and-tax/capital-gains-tax-advisory" },
+            { name: "Handling Tax Notices", path: "/services/finance-and-tax/handling-tax-notices" },
+            { name: "ITR Filing for Businesses", path: "/services/finance-and-tax/itr-filing-for-businesses" },
+            { name: "ITR Filing for HUF", path: "/services/finance-and-tax/itr-filing-for-huf" },
+            { name: "ITR Filing for Individuals", path: "/services/finance-and-tax/itr-filing-for-individuals" },
+            { name: "TDS/TCS Return Filing", path: "/services/finance-and-tax/tds-tcs-return-filing" },
+            { name: "Tax Planning & Savings Advisory", path: "/services/finance-and-tax/tax-planning-and-savings-advisory" },
+            { name: "Tax Refund Status", path: "/services/finance-and-tax/tax-refund-status" },
           ],
         },
         {
           parent: "GST Services",
           children: [
-            "GST Registration Services",
-            "GST Return Filing (GSTR-1, GSTR-3B)",
-            "GST Audit & Assessment Support",
+            { name: "GST Registration Services", path: "/services/finance-and-tax/gst-registration-services" },
+            { name: "GST Return Filing", path: "/services/finance-and-tax/gst-return-filing" },
+            { name: "GST Audit & Assessment Support", path: "/services/finance-and-tax/gst-audit-and-assessment-support" },
           ],
         },
         {
           parent: "Business Compliance & Advisory",
           children: [
-            "Private Limited Company Registration",
-            "LLP Registration",
-            "ROC Filings & Annual Compliance",
+            { name: "Private Limited Company Registration", path: "/services/finance-and-tax/private-limited-company-registration" },
+            { name: "LLP Registration", path: "/services/finance-and-tax/llp-registration" },
+            { name: "ROC Filings & Annual Compliance", path: "/services/finance-and-tax/roc-filings-and-annual-compliance" },
           ],
         },
       ],
@@ -47,62 +52,15 @@ const Navbar = () => {
       items: [
         {
           parent: "Custom Software Development",
-          children: [
-            "Enterprise Software Solutions",
-            "CRM Software Development",
-            "ERP Software Implementation",
-          ],
-        },
-        {
-          parent: "Website Development",
-          children: [
-            "Corporate Website Design",
-            "E-commerce Website Development",
-            "Website Maintenance & Support",
-          ],
-        },
-        {
-          parent: "Mobile App Development",
-          children: [
-            "Android App Development",
-            "iOS App Development",
-            "Hybrid App Development",
-          ],
-        },
-      ],
-    },
-    marketing: {
-      title: "Digital Marketing Services",
-      items: [
-        {
-          parent: "SEO Optimization",
-          children: [
-            "On-Page SEO",
-            "Off-Page SEO",
-            "Technical SEO",
-            "Local SEO",
-          ],
-        },
-        {
-          parent: "Social Media Marketing",
-          children: [
-            "Facebook & Instagram Ads",
-            "LinkedIn Marketing",
-            "Content Strategy",
-          ],
-        },
-      ],
-    },
-    consultancy: {
-      title: "Consultancy & HR Solutions",
-      items: [
-        {
-          parent: "Startup Advisory Services",
           children: [],
         },
         {
-          parent: "Recruitment & Staffing",
-          children: ["Permanent Staffing", "Contract Staffing"],
+          parent: "Website Development",
+          children: [],
+        },
+        {
+          parent: "Mobile App Development",
+          children: [],
         },
       ],
     },
@@ -201,12 +159,14 @@ const Navbar = () => {
 
                     {/* Right Content - Service Details */}
                     <div className="w-full md:w-[450px] lg:w-[700px] p-4 md:p-6 lg:p-8 max-h-[60vh] md:max-h-[70vh] overflow-y-auto">
-                      <h2 
-                        className="text-base md:text-lg lg:text-xl font-bold mb-4 md:mb-6 pb-2 md:pb-3 border-b-2"
-                        style={{ color: "#b02d33", borderColor: "#eb6126" }}
-                      >
-                        {services[activeCategory]?.title}
-                      </h2>
+                      <Link to={services[activeCategory]?.path || '#'}>
+                        <h2 
+                          className="text-base md:text-lg lg:text-xl font-bold mb-4 md:mb-6 pb-2 md:pb-3 border-b-2 hover:opacity-80 transition-opacity"
+                          style={{ color: "#b02d33", borderColor: "#eb6126" }}
+                        >
+                          {services[activeCategory]?.title}
+                        </h2>
+                      </Link>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
                         {services[activeCategory]?.items.map((item, idx) => (
@@ -227,18 +187,14 @@ const Navbar = () => {
                               <ul className="space-y-1.5 md:space-y-2 ml-8 md:ml-10">
                                 {item.children.map((child, i) => (
                                   <li key={i}>
-                                    <a
-                                      href={`/services/${activeCategory}/${item.parent
-                                        .toLowerCase()
-                                        .replace(/\s+/g, "-")}/${child
-                                        .toLowerCase()
-                                        .replace(/\s+/g, "-")}`}
+                                    <Link
+                                      to={child.path}
                                       className="text-xs hover:opacity-70 transition-all flex items-start gap-1 group"
                                       style={{ color: "#6b7280" }}
                                     >
                                       <span className="mt-0.5 flex-shrink-0" style={{ color: "#eb6126" }}>→</span>
-                                      <span className="group-hover:translate-x-1 transition-transform">{child}</span>
-                                    </a>
+                                      <span className="group-hover:translate-x-1 transition-transform">{child.name}</span>
+                                    </Link>
                                   </li>
                                 ))}
                               </ul>
@@ -377,18 +333,14 @@ const Navbar = () => {
                                 {item.children.length > 0 && (
                                   <div className="ml-3 mt-1 space-y-1">
                                     {item.children.map((child, childIdx) => (
-                                      <a
+                                      <Link
                                         key={childIdx}
-                                        href={`/services/${key}/${item.parent
-                                          .toLowerCase()
-                                          .replace(/\s+/g, "-")}/${child
-                                          .toLowerCase()
-                                          .replace(/\s+/g, "-")}`}
+                                        to={child.path}
                                         className="block text-xs py-1"
                                         style={{ color: "#6b7280" }}
                                       >
-                                        → {child}
-                                      </a>
+                                        → {child.name}
+                                      </Link>
                                     ))}
                                   </div>
                                 )}

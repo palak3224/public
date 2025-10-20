@@ -1,60 +1,60 @@
 
 import React, { useState } from 'react';
-import { Scissors, FilePlus, RefreshCw, Puzzle, CheckCircle, FileText } from 'lucide-react';
+import { Search, Wrench, HelpCircle, CheckCircle, Clock, UserCheck, FileWarning } from 'lucide-react';
 
-export default function TDSTCSReturnFiling() {
+export default function TaxRefundStatus() {
   const [hoveredBenefit, setHoveredBenefit] = useState(null);
   const [activeFaq, setActiveFaq] = useState(null);
 
   const benefits = [
     {
       id: 1,
-      icon: FilePlus,
-      title: "Full-Service Return Filing",
-      description: "We manage the entire TDS/TCS process, from calculation and deduction to timely return filing."
+      icon: Clock,
+      title: "Real-Time Refund Tracking & Updates",
+      description: "We use the latest tools to track your refund status in real-time and keep you informed at every step."
     },
     {
       id: 2,
-      icon: RefreshCw,
-      title: "Correction and Amendment Services",
-      description: "Expert assistance for correcting and amending previous TDS/TCS filings to ensure full compliance."
+      icon: Wrench,
+      title: "Assistance for Glitch & Rectification",
+      description: "Our team helps resolve any technical glitches or discrepancies by filing rectification requests on your behalf."
     },
     {
       id: 3,
-      icon: Puzzle,
-      title: "Integration with Accounting Systems",
-      description: "Seamless integration with your existing payroll and accounting systems for accurate data flow."
+      icon: HelpCircle,
+      title: "Expert Guidance for Refund Claims",
+      description: "Receive expert guidance on tax adjustments and making a successful claim for your rightful refund."
     },
     {
       id: 4,
-      icon: FileText,
-      title: "Compliance Advisory for New Provisions",
-      description: "Stay updated and compliant with the new TDS provisions and threshold limits introduced in 2025."
+      icon: UserCheck,
+      title: "Support Till Refund Receipt",
+      description: "We provide end-to-end support, from tracking your refund to ensuring it is successfully credited to your account."
     }
   ];
 
-  const services = [
-    { title: "TDS/TCS Calculation", icon: Scissors },
-    { title: "Quarterly Return Filing", icon: FilePlus },
-    { title: "Correction Filing", icon: RefreshCw },
-    { title: "Dashboard Reconciliation", icon: Puzzle }
+  const processSteps = [
+    { title: "Real-Time Tracking", icon: Search },
+    { title: "Liaison with IT Department", icon: UserCheck },
+    { title: "Rectification Filing", icon: FileWarning },
+    { title: "Refund Confirmation", icon: CheckCircle }
   ];
 
   const faqs = [
     {
       id: 1,
-      question: "What are the current TDS threshold limits?",
-      answer: "TDS thresholds vary based on the nature of the payment (e.g., salary, rent, professional fees). For FY 2025-26, several limits have been revised. We provide a detailed chart and advisory based on your needs."
+      question: "How can I check my ITR refund status?",
+      answer: "You can check your refund status on the official Income Tax portal using your PAN and assessment year. Our service includes doing this for you and providing regular updates."
     },
     {
       id: 2,
-      question: "How do you file TDS correction returns?",
-      answer: "Correction returns are filed to rectify errors in a previously filed return. This is done online through the TRACES portal. Our team handles the entire correction process for you."
+      question: "What causes income tax refund delays?",
+      answer: "Delays can be caused by incorrect bank details, discrepancies in the ITR form, or pending verification. We help identify and resolve these issues to expedite your refund."
     },
     {
       id: 3,
-      question: "What penalties apply for late TDS payments or filing?",
-      answer: "Late filing of TDS returns attracts a fee under Section 234E. Additionally, interest is levied for late payment of TDS. Timely compliance is crucial to avoid these penalties."
+      question: "Can I claim interest on a delayed refund?",
+      answer: "Yes, the Income Tax Department is liable to pay interest under Section 244A if the refund is more than 10% of the tax determined. The interest is calculated from the beginning of the assessment year."
     }
   ];
 
@@ -76,30 +76,30 @@ export default function TDSTCSReturnFiling() {
                   className="px-4 py-2 rounded-full text-sm font-semibold text-white"
                   style={{ backgroundColor: '#eb6126' }}
                 >
-                  Compliance 2025
+                  Expert Refund Assistance
                 </span>
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Expert TDS & TCS Return Filing Services
+                Track and Expedite Your Income Tax Refund
               </h1>
               <p className="text-xl text-white opacity-90 mb-8 leading-relaxed">
-                Ensure timely and accurate TDS and TCS filings with Amool Enterprises. Stay compliant with updated thresholds and avoid penalties.
+                Check your refund status, resolve delays, and claim your rightful tax refunds with Amool Enterprises’ expert assistance for AY 2025.
               </p>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 mr-2" style={{ color: '#eb6126' }} />
-                  <span>Timely Filing</span>
+                  <span>Resolve Delays</span>
                 </div>
                 <div className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 mr-2" style={{ color: '#eb6126' }} />
-                  <span>Avoid Penalties</span>
+                  <span>Hassle-Free</span>
                 </div>
               </div>
             </div>
             <div className="flex justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1586473219118-400b31cb318e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
-                alt="TDS TCS Filing"
+                src="https://images.unsplash.com/photo-1614028674022-3c864a3a4a83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80"
+                alt="Tax Refund"
                 className="rounded-lg shadow-2xl w-full max-w-md"
               />
             </div>
@@ -118,24 +118,24 @@ export default function TDSTCSReturnFiling() {
             
             <div className="bg-white rounded-lg shadow-lg p-8 md:p-10">
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                TDS (Tax Deducted at Source) and TCS (Tax Collected at Source) compliance is mandatory for various payments and receipts. For FY 2025-26, revised threshold limits and e-filing mandates apply across sectors.
+                Taxpayers awaiting refunds often face delays and procedural hurdles. Using the latest Annual Information Statement and refund monitoring tools, our team tracks refunds in real-time.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                We handle monthly/quarterly TDS returns, correction filings, and dashboard reconciliations, leveraging the latest government portal features like Form 26Q, 27Q, and e-TDS validation to keep you penalty-free.
+                We expedite processing via liaison with the IT department and assist in rectification if discrepancies arise. Experience hassle-free refund management for AY 2025.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Services Offered Section */}
+      {/* Our Process Section */}
       <div className="py-16 md:py-24" style={{ backgroundColor: '#fff5f2' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center" style={{ color: '#b02d33' }}>
-            Services We Offer
+            Our Refund Assistance Process
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((item, index) => (
+            {processSteps.map((item, index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-md text-center transition-all duration-300 hover:shadow-xl">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center text-white" style={{ backgroundColor: '#b02d33' }}>
                   <item.icon className="w-8 h-8" />
@@ -242,10 +242,10 @@ export default function TDSTCSReturnFiling() {
       <div className="py-16 text-center" style={{ backgroundColor: '#fff5f2' }}>
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#b02d33' }}>
-            Stay TDS-Compliant
+            Track and Claim Your Refund With Expert Support
           </h2>
           <p className="text-lg text-gray-700 mb-8">
-            Get expert filing assistance now to ensure you are fully compliant with all TDS and TCS regulations.
+            Let us help you get your hard-earned money back without the hassle.
           </p>
           <button 
             className="px-8 py-4 rounded-lg text-white font-semibold text-lg transition-all duration-300 shadow-lg"
@@ -261,7 +261,7 @@ export default function TDSTCSReturnFiling() {
               e.target.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
             }}
           >
-            Get Expert Filing Assistance
+            Get Refund Support
           </button>
         </div>
       </div>
