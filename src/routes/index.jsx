@@ -25,6 +25,64 @@ import LLPRegistration from "@/pages/Services/FinanceAndTax/BusinessCompliance/L
 import OnePersonCompanyRegistration from "@/pages/Services/FinanceAndTax/BusinessCompliance/OnePersonCompanyRegistration";
 import PrivateLimitedCompanyRegistration from "@/pages/Services/FinanceAndTax/BusinessCompliance/PrivateLimitedCompanyRegistration";
 import ROCFilingsAndAnnualCompliance from "@/pages/Services/FinanceAndTax/BusinessCompliance/ROCFilingsAndAnnualCompliance";
+
+// 💻 Technology Solutions
+import TechnologySolutions from "@/pages/Services/TechnologySolutions/TechnologySolutions";
+
+// Custom Software
+import CustomSoftwareDevelopment from "@/pages/Services/TechnologySolutions/CustomSoftware/CustomSoftwareDevelopment";
+import EnterpriseSoftwareSolutions from "@/pages/Services/TechnologySolutions/CustomSoftware/EnterpriseSoftwareSolutions";
+import CRMSoftwareDevelopment from "@/pages/Services/TechnologySolutions/CustomSoftware/CRMSoftwareDevelopment";
+import ERPSoftwareImplementation from "@/pages/Services/TechnologySolutions/CustomSoftware/ERPSoftwareImplementation";
+
+// Website Development
+import WebsiteDevelopment from "@/pages/Services/TechnologySolutions/WebsiteDevelopment/WebsiteDevelopment";
+import CorporateWebsiteDesign from "@/pages/Services/TechnologySolutions/WebsiteDevelopment/CorporateWebsiteDesign";
+import EcommerceWebsiteDevelopment from "@/pages/Services/TechnologySolutions/WebsiteDevelopment/EcommerceWebsiteDevelopment";
+import WebsiteMaintenanceAndSupport from "@/pages/Services/TechnologySolutions/WebsiteDevelopment/WebsiteMaintenanceAndSupport";
+
+// Mobile App Development
+import MobileAppDevelopment from "@/pages/Services/TechnologySolutions/MobileAppDevelopment/MobileAppDevelopment";
+import AndroidAppDevelopment from "@/pages/Services/TechnologySolutions/MobileAppDevelopment/AndroidAppDevelopment";
+import IOSAppDevelopment from "@/pages/Services/TechnologySolutions/MobileAppDevelopment/IOSAppDevelopment";
+import HybridAppDevelopment from "@/pages/Services/TechnologySolutions/MobileAppDevelopment/HybridAppDevelopment";
+
+// UI/UX Design
+import UIUXDesignServices from "@/pages/Services/TechnologySolutions/UIUXDesign/UIUXDesignServices";
+
+// Technology Stack
+import TechnologyStack from "@/pages/Services/TechnologySolutions/TechStack/TechnologyStack";
+
+
+// 🧭 Digital Marketing & Growth Services
+import DigitalMarketingMain from "@/pages/Services/DigitalMarketing/DigitalMarketingMain";
+
+// SEO
+import SEO from "@/pages/Services/DigitalMarketing/SEO/SEO";
+import OnPageSEO from "@/pages/Services/DigitalMarketing/SEO/OnPageSEO";
+import TechnicalSEO from "@/pages/Services/DigitalMarketing/SEO/TechnicalSEO";
+import OffPageSEO from "@/pages/Services/DigitalMarketing/SEO/OffPageSEO";
+import LocalSEO from "@/pages/Services/DigitalMarketing/SEO/LocalSEO";
+import EcommerceSEO from "@/pages/Services/DigitalMarketing/SEO/EcommerceSEO";
+
+// Social Media Marketing
+import SocialMediaMarketing from "@/pages/Services/DigitalMarketing/SocialMediaMarketing/SocialMediaMarketing";
+import SocialMediaStrategy from "@/pages/Services/DigitalMarketing/SocialMediaMarketing/SocialMediaStrategy";
+import FacebookInstagramMarketing from "@/pages/Services/DigitalMarketing/SocialMediaMarketing/FacebookInstagramMarketing";
+import LinkedInMarketing from "@/pages/Services/DigitalMarketing/SocialMediaMarketing/LinkedInMarketing";
+
+// Paid Advertising
+import PaidAdvertising from "@/pages/Services/DigitalMarketing/PaidAdvertising/PaidAdvertising";
+import GoogleAdsManagement from "@/pages/Services/DigitalMarketing/PaidAdvertising/GoogleAdsManagement";
+import SocialMediaAdvertising from "@/pages/Services/DigitalMarketing/PaidAdvertising/SocialMediaAdvertising";
+
+// Content Marketing
+import ContentMarketing from "@/pages/Services/DigitalMarketing/ContentMarketing/ContentMarketing";
+
+// Case Studies
+import CaseStudies from "@/pages/Services/DigitalMarketing/CaseStudies/CaseStudies";
+
+
 import Contact from "@/pages/Contact/Components/Contact";
 import Career from "@/pages/Career/Components/Career";
 
@@ -124,6 +182,146 @@ const router = createBrowserRouter([
         path: "services/finance-and-tax/business-compliance/roc-filings-and-annual-compliance",
         element: <ROCFilingsAndAnnualCompliance />,
       },
+
+      // TECHNOLOGY SOLUTIONS ROUTES
+      {
+        path: "services/technology-solutions",
+        element: <TechnologySolutions />,
+      },
+      {
+        path: "services/technology-solutions/custom-software",
+        element: <CustomSoftwareDevelopment />,
+      },
+      {
+        path: "services/technology-solutions/custom-software/enterprise-software-solutions",
+        element: <EnterpriseSoftwareSolutions />,
+      },
+      {
+        path: "services/technology-solutions/custom-software/crm-software-development",
+        element: <CRMSoftwareDevelopment />,
+      },
+      {
+        path: "services/technology-solutions/custom-software/erp-software-implementation",
+        element: <ERPSoftwareImplementation />,
+      },
+      {
+        path: "services/technology-solutions/website-development",
+        element: <WebsiteDevelopment />,
+      },
+      {
+        path: "services/technology-solutions/website-development/corporate-website-design",
+        element: <CorporateWebsiteDesign />,
+      },
+      {
+        path: "services/technology-solutions/website-development/ecommerce-website-development",
+        element: <EcommerceWebsiteDevelopment />,
+      },
+      {
+        path: "services/technology-solutions/website-development/website-maintenance-and-support",
+        element: <WebsiteMaintenanceAndSupport />,
+      },
+      {
+        path: "services/technology-solutions/mobile-app-development",
+        element: <MobileAppDevelopment />,
+      },
+      {
+        path: "services/technology-solutions/mobile-app-development/android-app-development",
+        element: <AndroidAppDevelopment />,
+      },
+      {
+        path: "services/technology-solutions/mobile-app-development/ios-app-development",
+        element: <IOSAppDevelopment />,
+      },
+      {
+        path: "services/technology-solutions/mobile-app-development/hybrid-app-development",
+        element: <HybridAppDevelopment />,
+      },
+      {
+        path: "services/technology-solutions/ui-ux-design-services",
+        element: <UIUXDesignServices />,
+      },
+      {
+        path: "services/technology-solutions/tech-stack",
+        element: <TechnologyStack />,
+      },
+
+      // DIGITAL MARKETING & GROWTH SERVICES
+      {
+        path: "services/digital-marketing",
+        element: <DigitalMarketingMain />,
+      },
+
+      // SEO
+      {
+        path: "services/digital-marketing/seo",
+        element: <SEO />,
+      },
+      {
+        path: "services/digital-marketing/seo/on-page-seo",
+        element: <OnPageSEO />,
+      },
+      {
+        path: "services/digital-marketing/seo/technical-seo",
+        element: <TechnicalSEO />,
+      },
+      {
+        path: "services/digital-marketing/seo/off-page-seo",
+        element: <OffPageSEO />,
+      },
+      {
+        path: "services/digital-marketing/seo/local-seo",
+        element: <LocalSEO />,
+      },
+      {
+        path: "services/digital-marketing/seo/ecommerce-seo",
+        element: <EcommerceSEO />,
+      },
+
+      // Social Media Marketing
+      {
+        path: "services/digital-marketing/social-media",
+        element: <SocialMediaMarketing />,
+      },
+      {
+        path: "services/digital-marketing/social-media/strategy",
+        element: <SocialMediaStrategy />,
+      },
+      {
+        path: "services/digital-marketing/social-media/facebook-instagram",
+        element: <FacebookInstagramMarketing />,
+      },
+      {
+        path: "services/digital-marketing/social-media/linkedin",
+        element: <LinkedInMarketing />,
+      },
+
+      // Paid Advertising
+      {
+        path: "services/digital-marketing/paid-advertising",
+        element: <PaidAdvertising />,
+      },
+      {
+        path: "services/digital-marketing/paid-advertising/google-ads",
+        element: <GoogleAdsManagement />,
+      },
+      {
+        path: "services/digital-marketing/paid-advertising/social-ads",
+        element: <SocialMediaAdvertising />,
+      },
+
+      // Content Marketing
+      {
+        path: "services/digital-marketing/content-marketing",
+        element: <ContentMarketing />,
+      },
+
+      // Case Studies
+      {
+        path: "services/digital-marketing/case-studies",
+        element: <CaseStudies />,
+      },
+
+
       {
         path: "contact",
         element: <Contact />,
