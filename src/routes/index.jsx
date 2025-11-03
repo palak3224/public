@@ -82,9 +82,31 @@ import ContentMarketing from "@/pages/Services/DigitalMarketing/ContentMarketing
 // Case Studies
 import CaseStudies from "@/pages/Services/DigitalMarketing/CaseStudies/CaseStudies";
 
+// 🧠 Consultancy & HR Solutions
+import ConsultancyAndHRMain from "@/pages/Services/ConsultancyAndHR/ConsultancyAndHRMain";
+
+// Business Consultancy
+import StartupAdvisoryServices from "@/pages/Services/ConsultancyAndHR/BusinessConsultancy/StartupAdvisoryServices";
+import BusinessPlanDevelopment from "@/pages/Services/ConsultancyAndHR/BusinessConsultancy/BusinessPlanDevelopment";
+import FinancialProjectionsAndCMAReports from "@/pages/Services/ConsultancyAndHR/BusinessConsultancy/FinancialProjectionsAndCMAReports";
+import ProjectFinancingAndLoanSyndication from "@/pages/Services/ConsultancyAndHR/BusinessConsultancy/ProjectFinancingAndLoanSyndication";
+
+// Recruitment & Staffing
+import RecruitmentAndStaffing from "@/pages/Services/ConsultancyAndHR/RecruitmentAndStaffing/RecruitmentAndStaffing";
+import PermanentStaffing from "@/pages/Services/ConsultancyAndHR/RecruitmentAndStaffing/PermanentStaffing";
+import TemporaryContractStaffing from "@/pages/Services/ConsultancyAndHR/RecruitmentAndStaffing/TemporaryContractStaffing";
+
+// HR Management
+import HRPolicyFormulation from "@/pages/Services/ConsultancyAndHR/HRManagement/HRPolicyFormulation";
+import PayrollManagementServices from "@/pages/Services/ConsultancyAndHR/HRManagement/PayrollManagementServices";
+
+
 
 import Contact from "@/pages/Contact/Components/Contact";
 import Career from "@/pages/Career/Components/Career";
+import FAQ from "@/pages/FAQ/FAQ";
+import Testimonials from "@/pages/TestimonialsAndClientSuccess/Testimonials";
+import LegalAndPolicies from "@/pages/LegalAndPolicies/LegalAndPolicies";
 
 const router = createBrowserRouter([
   {
@@ -321,7 +343,68 @@ const router = createBrowserRouter([
         element: <CaseStudies />,
       },
 
+      // CONSULTANCY & HR SOLUTIONS ROUTES
+      {
+        path: "services/consultancy-and-hr",
+        element: <ConsultancyAndHRMain />,
+      },
 
+      // Business Consultancy
+      {
+        path: "services/consultancy-and-hr/business-consultancy/startup-advisory-services",
+        element: <StartupAdvisoryServices />,
+      },
+      {
+        path: "services/consultancy-and-hr/business-consultancy/business-plan-development",
+        element: <BusinessPlanDevelopment />,
+      },
+      {
+        path: "services/consultancy-and-hr/business-consultancy/financial-projections-and-cma-reports",
+        element: <FinancialProjectionsAndCMAReports />,
+      },
+      {
+        path: "services/consultancy-and-hr/business-consultancy/project-financing-and-loan-syndication",
+        element: <ProjectFinancingAndLoanSyndication />,
+      },
+
+      // Recruitment & Staffing
+      {
+        path: "services/consultancy-and-hr/recruitment-and-staffing",
+        element: <RecruitmentAndStaffing />,
+      },
+      {
+        path: "services/consultancy-and-hr/recruitment-and-staffing/permanent-staffing",
+        element: <PermanentStaffing />,
+      },
+      {
+        path: "services/consultancy-and-hr/recruitment-and-staffing/temporary-contract-staffing",
+        element: <TemporaryContractStaffing />,
+      },
+
+      // HR Management
+      {
+        path: "services/consultancy-and-hr/hr-management/hr-policy-formulation",
+        element: <HRPolicyFormulation />,
+      },
+      {
+        path: "services/consultancy-and-hr/hr-management/payroll-management-services",
+        element: <PayrollManagementServices />,
+      },
+
+
+
+      {
+        path: "testimonials",
+        element: <Testimonials />,
+      },
+      {
+        path: "legal",
+        element: <LegalAndPolicies />,
+      },
+      {
+        path: "faq",
+        element: <FAQ />,
+      },
       {
         path: "contact",
         element: <Contact />,

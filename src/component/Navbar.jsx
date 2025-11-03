@@ -143,6 +143,37 @@ const Navbar = () => {
   ],
     },
 
+    consultancy: {
+      title: "Consultancy & HR Solutions",
+      path: "/services/consultancy-and-hr",
+      items: [
+        {
+          parent: "Business Consultancy",
+          children: [
+            { name: "Startup Advisory Services", path: "/services/consultancy-and-hr/business-consultancy/startup-advisory-services" },
+            { name: "Business Plan Development", path: "/services/consultancy-and-hr/business-consultancy/business-plan-development" },
+            { name: "Financial Projections & CMA Reports", path: "/services/consultancy-and-hr/business-consultancy/financial-projections-and-cma-reports" },
+            { name: "Project Financing & Loan Syndication", path: "/services/consultancy-and-hr/business-consultancy/project-financing-and-loan-syndication" },
+          ],
+        },
+        {
+          parent: "Recruitment & Staffing",
+          children: [
+            { name: "Recruitment & Staffing", path: "/services/consultancy-and-hr/recruitment-and-staffing" },
+            { name: "Permanent Staffing", path: "/services/consultancy-and-hr/recruitment-and-staffing/permanent-staffing" },
+            { name: "Temporary / Contract Staffing", path: "/services/consultancy-and-hr/recruitment-and-staffing/temporary-contract-staffing" },
+          ],
+        },
+        {
+          parent: "HR Management",
+          children: [
+            { name: "HR Policy Formulation", path: "/services/consultancy-and-hr/hr-management/hr-policy-formulation" },
+            { name: "Payroll Management Services", path: "/services/consultancy-and-hr/hr-management/payroll-management-services" },
+          ],
+        },
+      ],
+    },
+
   };
 
   // ===========================
