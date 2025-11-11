@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function HeroSection() {
@@ -66,13 +67,15 @@ export default function HeroSection() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
-              <button 
+              <Link 
+                to="/contact"
                 className="px-8 py-4 text-white font-semibold rounded-lg text-lg"
                 style={{ backgroundColor: '#b02d33' }}
               >
                 Schedule a Free Consultation
-              </button>
-              <button 
+              </Link>
+              <Link 
+                to="/services/finance-and-tax"
                 className="px-8 py-4 font-semibold rounded-lg text-lg border-2"
                 style={{ 
                   color: '#eb6126',
@@ -80,7 +83,7 @@ export default function HeroSection() {
                 }}
               >
                 Explore Our Services
-              </button>
+              </Link>
             </div>
           </div>
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Award, Target, Users, TrendingUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function AboutUs() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -288,14 +289,15 @@ export default function AboutUs() {
           <p className="text-white text-lg mb-8 opacity-90">
             Let's discuss how we can help you achieve your business goals
           </p>
-          <button 
-            className="px-8 py-3 rounded-lg text-white font-medium text-lg transition-colors"
+          <Link 
+            to="/contact"
+            className="inline-block px-8 py-3 rounded-lg text-white font-medium text-lg transition-colors"
             style={{ backgroundColor: '#eb6126' }}
             onMouseEnter={(e) => e.target.style.backgroundColor = '#d55520'}
             onMouseLeave={(e) => e.target.style.backgroundColor = '#eb6126'}
           >
             Schedule a Free Consultation
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -69,13 +69,13 @@ const TechnologySolutions = () => {
               Empower your business with cutting-edge technology tailored to your goals. From custom software to mobile apps, web development, and UX design — we build digital solutions that drive real results.
             </p>
             <div className="flex gap-4 flex-wrap">
-              <button className="bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+              <Link to="/contact" className="bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                 Get a Free Consultation
                 <ArrowRight size={20} />
-              </button>
-              <button className="bg-white border-2 border-slate-200 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:border-blue-900 hover:text-blue-900 transition-all duration-200 shadow-sm hover:shadow-md">
+              </Link>
+              <Link to="/contact" className="bg-white border-2 border-slate-200 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:border-blue-900 hover:text-blue-900 transition-all duration-200 shadow-sm hover:shadow-md">
                 Explore Services
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -198,13 +198,13 @@ const TechnologySolutions = () => {
             Let's discuss how we can transform your digital presence and drive your business forward.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <button className="bg-blue-900 text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+            <Link to="/contact" className="bg-blue-900 text-white px-10 py-4 rounded-lg font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
               Schedule a Free Consultation
               <ArrowRight size={20} />
-            </button>
-            <button className="bg-white border-2 border-slate-200 text-slate-900 px-10 py-4 rounded-lg font-semibold hover:border-blue-900 hover:text-blue-900 transition-all duration-200 shadow-sm hover:shadow-md">
+            </Link>
+            <Link to="/contact" className="bg-white border-2 border-slate-200 text-slate-900 px-10 py-4 rounded-lg font-semibold hover:border-blue-900 hover:text-blue-900 transition-all duration-200 shadow-sm hover:shadow-md">
               Talk to Our Experts
-            </button>
+            </Link>
           </div>
         </div>
       </section>

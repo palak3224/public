@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Award, Target, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function TeamPage() {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -277,14 +278,15 @@ export default function TeamPage() {
           <p className="text-white text-lg mb-8 opacity-90">
             Connect with our specialists and discover how we can help your business thrive
           </p>
-          <button 
-            className="px-8 py-3 rounded-lg text-white font-medium text-lg transition-colors"
+          <Link 
+            to="/contact"
+            className="inline-block px-8 py-3 rounded-lg text-white font-medium text-lg transition-colors"
             style={{ backgroundColor: '#eb6126' }}
             onMouseEnter={(e) => e.target.style.backgroundColor = '#d55520'}
             onMouseLeave={(e) => e.target.style.backgroundColor = '#eb6126'}
           >
             Get in Touch
-          </button>
+          </Link>
         </div>
       </div>
     </div>

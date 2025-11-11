@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FileText, Calculator, Building2, TrendingUp, Shield, Clock, Users, CheckCircle } from 'lucide-react';
 
 const FinanceAndTax = () => {
@@ -285,14 +286,15 @@ const FinanceAndTax = () => {
           <p className="text-white text-lg mb-8 opacity-90">
             Trusted by startups, SMEs, and enterprises across industries
           </p>
-          <button 
-            className="px-8 py-3 rounded-lg text-white font-medium text-lg transition-colors"
+          <Link 
+            to="/contact"
+            className="inline-block px-8 py-3 rounded-lg text-white font-medium text-lg transition-colors"
             style={{ backgroundColor: '#eb6126' }}
             onMouseEnter={(e) => e.target.style.backgroundColor = '#d55520'}
             onMouseLeave={(e) => e.target.style.backgroundColor = '#eb6126'}
           >
             Schedule a Free Consultation
-          </button>
+          </Link>
         </div>
       </div>
     </div>

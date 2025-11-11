@@ -198,13 +198,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-full h-10 md:w-full md:h-20 rounded-lg overflow-hidden">
-              <img
-                src="/amoollogo.jpg"
-                alt="Amool Logo"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <Link to="/" className="block">
+              <div className="w-full h-10 md:w-full md:h-20 rounded-lg overflow-hidden">
+                <img
+                  src="/amoollogo.jpg"
+                  alt="Amool Logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -314,9 +316,9 @@ const Navbar = () => {
 
           {/* CTA + Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <button className="hidden sm:block text-white font-bold px-6 py-2 rounded-lg hover:opacity-90 transition-opacity" style={{ backgroundColor: "#eb6126" }}>
+            <Link to="/contact" className="hidden sm:block text-white font-bold px-6 py-2 rounded-lg hover:opacity-90 transition-opacity" style={{ backgroundColor: "#eb6126" }}>
               Get Started
-            </button>
+            </Link>
             <button className="block lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} style={{ color: "#b02d33" }}>
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -395,9 +397,9 @@ const Navbar = () => {
               <Link to="/contact" className="font-semibold py-2 hover:opacity-80 transition-opacity" style={{ color: "#b02d33" }}>Contact Us</Link>
               <Link to="/careers" className="font-semibold py-2 hover:opacity-80 transition-opacity" style={{ color: "#b02d33" }}>Careers</Link>
 
-              <button className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity w-full sm:hidden mt-4" style={{ backgroundColor: "#eb6126" }}>
+              <Link to="/contact" className="text-white font-bold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity w-full sm:hidden mt-4" style={{ backgroundColor: "#eb6126" }}>
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         )}

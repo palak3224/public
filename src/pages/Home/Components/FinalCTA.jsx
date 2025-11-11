@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function FinalCTA() {
@@ -25,13 +26,14 @@ export default function FinalCTA() {
           </p>
 
           {/* CTA Button */}
-          <button 
+          <Link 
+            to="/contact"
             className="inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 text-base sm:text-lg lg:text-xl font-bold rounded-lg text-white transition-all duration-300 hover:scale-105 hover:shadow-xl w-full sm:w-auto"
             style={{ backgroundColor: '#eb6126' }}
           >
             Get Started Now
             <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
-          </button>
+          </Link>
         </div>
       </div>
     </div>
