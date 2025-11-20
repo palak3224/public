@@ -7,7 +7,8 @@ export default function ContactUs() {
     email: '',
     phone: '',
     service: '',
-    message: ''
+    message: '',
+    
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [hoveredCard, setHoveredCard] = useState(null);
